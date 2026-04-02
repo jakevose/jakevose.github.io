@@ -30,7 +30,10 @@ jobs:
       - name: Install dependencies
         run: mise exec -- npm ci
 
-      - name: Build site
+      - name: Install Playwright Chromium
+        run: mise exec -- npx playwright install --with-deps chromium
+
+      - name: Build site and PDF
         run: mise run build
 
       - name: Upload Pages artifact

@@ -9,6 +9,18 @@ run = "npm install"
 description = "Start the Eleventy development server"
 run = "npm run dev"
 
-[tasks.build]
-description = "Build the production site"
+[tasks.site]
+description = "Build only the production website"
 run = "npm run build"
+
+[tasks.build]
+description = "Build the production site and PDF resume"
+run = "npm run build:all"
+
+[tasks.pdf]
+description = "Build the site and render the two-page PDF resume"
+run = "npm run build:all"
+
+[tasks.pdf-watch]
+description = "Watch source files and regenerate the PDF resume on change"
+run = "npm run watch:pdf"

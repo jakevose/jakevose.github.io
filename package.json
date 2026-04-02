@@ -6,6 +6,10 @@
   "scripts": {
     "dev": "eleventy --serve",
     "build": "eleventy",
+    "render:pdf": "node scripts/render-resume-pdf.mjs",
+    "build:all": "npm run build && npm run render:pdf",
+    "build:pdf": "npm run build:all",
+    "watch:pdf": "chokidar \"src/**/*\" \"resume_sources/**/*\" \".eleventy.js\" \"package.json\" -c \"npm run build:all\"",
     "clean": "rm -rf _site"
   },
   "repository": {
@@ -21,6 +25,11 @@
   "homepage": "https://github.com/jakevose/jakevose.github.io#readme",
   "engines": {
     "node": ">=22 <23"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0",
+    "pdf-lib": "^1.17.1",
+    "playwright": "^1.59.1"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.5"

@@ -1,0 +1,147 @@
+---
+permalink: /resume/index.html
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ resume.pageTitle }}</title>
+    <meta name="description" content="{{ resume.pageDescription }}">
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="stylesheet" href="/assets/print-resume.css">
+  </head>
+  <body>
+    <main class="resume-document">
+      <section class="page page--summary" aria-labelledby="resume-name">
+        <header class="masthead">
+          <div>
+            <h1 id="resume-name">{{ profile.name }}</h1>
+            <p class="headline">{{ resume.headline }}</p>
+          </div>
+
+          <ul class="contact-list" aria-label="Contact details">
+            <li>{{ profile.location }}</li>
+            {% for item in resume.links %}
+            <li>
+              <span>{{ item.label }}</span>
+              <a href="{{ item.href }}">{{ item.value }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </header>
+
+        <section class="intro-grid">
+          <div class="summary-panel">
+            <p class="section-label">Summary</p>
+            <p class="summary-copy">{{ resume.summary }}</p>
+          </div>
+
+          <div class="expertise-panel">
+            <p class="section-label">Core expertise</p>
+            <ul class="chip-list">
+              {% for item in resume.coreExpertise %}
+              <li>{{ item }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+
+        <section class="impact-section" aria-labelledby="impact-title">
+          <div class="section-heading">
+            <p class="section-label">Selected impact</p>
+            <h2 id="impact-title">Quantified outcomes supporting principal-level scope</h2>
+          </div>
+
+          <div class="impact-grid">
+            {% for point in resume.selectedImpact %}
+            <article class="impact-card">
+              <p class="impact-card__metric">{{ point.metric }}</p>
+              <h3>{{ point.label }}</h3>
+              <p>{{ point.context }}</p>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+
+        <section class="experience-section" aria-labelledby="current-role-title">
+          <div class="section-heading">
+            <p class="section-label">Current experience</p>
+            <h2 id="current-role-title">{{ resume.currentExperience.role }} · {{ resume.currentExperience.company }}</h2>
+          </div>
+
+          <div class="role-meta">
+            <span>{{ resume.currentExperience.period }}</span>
+            <span>{{ resume.currentExperience.location }}</span>
+          </div>
+
+          <p class="role-summary">{{ resume.currentExperience.summary }}</p>
+
+          <ul class="bullet-list bullet-list--dense">
+            {% for bullet in resume.currentExperience.bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+      </section>
+
+      <section class="page page--detail" aria-labelledby="experience-history-title">
+        <div class="detail-grid">
+          <section class="history-section">
+            <div class="section-heading">
+              <p class="section-label">Earlier experience</p>
+              <h2 id="experience-history-title">Leadership, product, and consulting foundation</h2>
+            </div>
+
+            <div class="history-stack">
+              {% for item in resume.earlierExperience %}
+              <article class="history-item">
+                <div class="history-item__heading">
+                  <h3>{{ item.role }}</h3>
+                  <p>{{ item.company }} · {{ item.period }}</p>
+                </div>
+                <ul class="bullet-list">
+                  {% for highlight in item.highlights %}
+                  <li>{{ highlight }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
+              {% endfor %}
+            </div>
+          </section>
+
+          <aside class="sidebar">
+            <section class="sidebar-panel" aria-labelledby="skills-title">
+              <div class="section-heading section-heading--tight">
+                <p class="section-label">Selected capabilities</p>
+                <h2 id="skills-title">Platform scope and tooling</h2>
+              </div>
+
+              <div class="skill-groups">
+                {% for group in resume.skillGroups %}
+                <div class="skill-group">
+                  <h3>{{ group.label }}</h3>
+                  <p>{{ group.items | join(', ') }}</p>
+                </div>
+                {% endfor %}
+              </div>
+            </section>
+
+            <section class="sidebar-panel" aria-labelledby="credentials-title">
+              <div class="section-heading section-heading--tight">
+                <p class="section-label">Credentials</p>
+                <h2 id="credentials-title">Education and certification</h2>
+              </div>
+
+              <ul class="credential-list">
+                {% for item in resume.credentials %}
+                <li>{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
