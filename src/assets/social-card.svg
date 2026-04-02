@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Jake Vose social card</title>
+  <desc id="desc">Principal engineer focused on cloud platform modernization, secure delivery, platform resilience, and AI-enabled infrastructure operations.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f3f0e9" />
+      <stop offset="100%" stop-color="#e7e1d8" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="28" fill="url(#bg)" />
+  <circle cx="1030" cy="96" r="180" fill="#d8e2e5" opacity="0.55" />
+  <circle cx="140" cy="560" r="240" fill="#cfd7db" opacity="0.35" />
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="#faf8f4" stroke="#d4d7d6" />
+  <text x="112" y="162" fill="#2d5b72" font-family="Georgia, 'Times New Roman', serif" font-size="26" letter-spacing="2.4">JAKE VOSE</text>
+  <line x1="112" y1="182" x2="232" y2="182" stroke="#2d5b72" stroke-width="3" stroke-linecap="round" opacity="0.65" />
+  <text x="112" y="258" fill="#18222c" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600">Principal Engineer for</text>
+  <text x="112" y="326" fill="#18222c" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600">Cloud Platform Modernization</text>
+  <text x="112" y="402" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26">AWS governance, secure delivery, platform resilience,</text>
+  <text x="112" y="438" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26">and AI-enabled infrastructure operations</text>
+  <text x="112" y="492" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24">Enterprise and government environments • Ashburn, VA</text>
+  <text x="112" y="536" fill="#213f50" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="600">jakevose.github.io</text>
+</svg>

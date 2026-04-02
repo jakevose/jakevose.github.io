@@ -1,0 +1,14 @@
+[tools]
+node = "22.22.2"
+
+[tasks.install]
+description = "Install project dependencies"
+run = "npm install"
+
+[tasks.dev]
+description = "Start the Eleventy development server"
+run = "npm run dev"
+
+[tasks.build]
+description = "Build the production site"
+run = "npm run build"

@@ -1,0 +1,28 @@
+{
+  "name": "jakevose.github.io",
+  "version": "1.0.0",
+  "description": "Static CV site for Jake Vose built with Eleventy and managed with mise.",
+  "private": true,
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jakevose/jakevose.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jakevose/jakevose.github.io/issues"
+  },
+  "homepage": "https://github.com/jakevose/jakevose.github.io#readme",
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.5"
+  }
+}

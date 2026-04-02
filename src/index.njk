@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ site.canonicalUrl }}">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="{{ site.author }}">
+    <meta name="theme-color" content="{{ site.themeColor }}">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ profile.name }}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:url" content="{{ site.canonicalUrl }}">
+    <meta property="og:image" content="{{ site.socialImage }}">
+    <meta property="og:image:alt" content="{{ site.socialImageAlt }}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="{{ site.socialImage }}">
+    <meta name="twitter:image:alt" content="{{ site.socialImageAlt }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/app.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "url": "{{ site.canonicalUrl }}",
+        "name": "{{ site.title }}",
+        "description": "{{ site.description }}",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "{{ profile.name }}",
+          "jobTitle": "{{ profile.currentRole }}",
+          "url": "{{ site.canonicalUrl }}",
+          "image": "{{ site.siteUrl }}{{ profile.portrait }}",
+          "email": "{{ profile.email }}",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "{{ profile.currentCompany }}"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Ashburn",
+            "addressRegion": "VA"
+          },
+          "sameAs": ["{{ profile.linkedinUrl }}"],
+          "alumniOf": {
+            "@type": "CollegeOrUniversity",
+            "name": "SUNY Oswego"
+          },
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "name": "AWS Certified Solutions Architect – Professional (2025)"
+          },
+          "knowsAbout": [
+            "Cloud platform modernization",
+            "AWS governance",
+            "Secure delivery",
+            "Platform resilience",
+            "Infrastructure as code",
+            "Cost optimization",
+            "AI-assisted infrastructure operations"
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="shell hero">
+      <div class="hero__copy">
+        <p class="eyebrow">Principal Engineer • Cloud Platform Modernization • Secure Delivery</p>
+        <h1>{{ profile.name }}</h1>
+        <p class="hero__lede">{{ profile.summary }}</p>
+
+        <ul class="contact-list" aria-label="Contact details">
+          <li>{{ profile.location }}</li>
+          <li><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></li>
+          <li><a href="https://www.linkedin.com/in/jake-vose">{{ profile.linkedinLabel }}</a></li>
+        </ul>
+
+        <div class="hero__actions">
+          <a class="button button--primary" href="mailto:{{ profile.email }}">Start a conversation</a>
+          <a class="button button--ghost" href="#experience-title">View experience</a>
+        </div>
+      </div>
+
+      <aside class="hero__card" aria-label="Profile highlight">
+        <img class="portrait" src="{{ profile.portrait }}" alt="Portrait of {{ profile.name }}">
+        <div class="hero__card-copy">
+          <p class="hero__card-label">Current role</p>
+          <h2>{{ profile.currentRole }}</h2>
+          <p>At {{ profile.currentCompany }}, leading shared cloud modernization and delivery standards across regulated environments.</p>
+        </div>
+      </aside>
+    </header>
+
+    <main id="content">
+      <section class="shell metrics" aria-labelledby="proof-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected impact</p>
+          <h2 id="proof-title">Selected outcomes across platform modernization and delivery</h2>
+        </div>
+
+        <div class="metric-grid">
+          {% for point in profile.proofPoints %}
+          <article class="metric-card">
+            <p class="metric-card__value">{{ point.metric }}</p>
+            <h3>{{ point.label }}</h3>
+            <p>{{ point.context }}</p>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="shell split" aria-labelledby="focus-title">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Core strengths</p>
+            <h2 id="focus-title">Platform leadership, governance, and delivery systems</h2>
+          </div>
+          <ul class="strength-list">
+            {% for strength in profile.strengths %}
+            <li>{{ strength }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <div class="focus-stack">
+          {% for focus in profile.focusAreas %}
+          <article class="focus-panel">
+            <div class="focus-panel__title">
+              <h3>{{ focus.title }}</h3>
+            </div>
+            <div class="focus-panel__body">
+              <p>{{ focus.detail }}</p>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+      </section>
+
+      <section class="shell experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Recent leadership</p>
+          <h2 id="experience-title">Selected work</h2>
+        </div>
+
+        <div class="principal-work-intro">
+          <p class="principal-work-intro__eyebrow">{{ profile.currentCompany }} • {{ profile.currentPeriod }}</p>
+          <p class="principal-work-intro__copy">{{ profile.currentRoleSummary }}</p>
+        </div>
+
+        <div class="principal-work-grid">
+          {% for item in profile.principalWork %}
+          <article class="work-card">
+            <div class="work-card__header">
+              <h3>{{ item.title }}</h3>
+              <p class="work-card__lede">{{ item.lede }}</p>
+            </div>
+            <div class="work-card__body">
+              <ul>
+                {% for outcome in item.outcomes %}
+                <li>{{ outcome }}</li>
+                {% endfor %}
+              </ul>
+            </div>
+          </article>
+          {% endfor %}
+        </div>
+
+        <div class="experience-followup">
+          <div>
+            <div class="section-heading section-heading--compact">
+              <p class="eyebrow">Earlier foundation</p>
+              <h3>Leadership, consulting, and product depth behind the current platform work</h3>
+            </div>
+            <div class="foundation-grid">
+              {% for item in profile.earlierFoundation %}
+              <article class="foundation-card">
+                <h4>{{ item.title }}</h4>
+                <p>{{ item.detail }}</p>
+              </article>
+              {% endfor %}
+            </div>
+          </div>
+
+          <aside class="career-history" aria-labelledby="career-history-title">
+            <div class="section-heading section-heading--compact">
+              <p class="eyebrow">Career history</p>
+              <h3 id="career-history-title">Roles and tenure</h3>
+            </div>
+            <ul class="career-history__list">
+              {% for item in profile.careerHistory %}
+              <li>
+                <span class="career-history__role">{{ item.role }}</span>
+                <span class="career-history__company">{{ item.company }}</span>
+                <span class="career-history__period">{{ item.period }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="shell skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Technical scope</p>
+          <h2 id="skills-title">Platform breadth, tooling depth, and credentials</h2>
+        </div>
+
+        <div class="skill-grid">
+          {% for skill in profile.skills %}
+          <article class="skill-card">
+            <h3>{{ skill.label }}</h3>
+            <p>{{ skill.items | join(', ') }}</p>
+          </article>
+          {% endfor %}
+        </div>
+
+        <div class="credential-list">
+          {% for credential in profile.credentials %}
+          <p>{{ credential }}</p>
+          {% endfor %}
+        </div>
+      </section>
+    </main>
+
+    <footer class="shell footer">
+      <p>Building durable engineering systems for complex cloud environments.</p>
+    </footer>
+
+  </body>
+</html>
