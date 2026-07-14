@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
   <title id="title">Jake Vose social card</title>
-  <desc id="desc">Principal engineer focused on cloud platform modernization, secure delivery, platform resilience, and AI-enabled infrastructure operations.</desc>
+  <desc id="desc">Principal engineer focused on cloud platform modernization, cost controls, capacity optimization, platform resilience, and AI-enabled infrastructure operations.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#f3f0e9" />
@@ -15,8 +15,8 @@
   <line x1="112" y1="182" x2="232" y2="182" stroke="#2d5b72" stroke-width="3" stroke-linecap="round" opacity="0.65" />
   <text x="112" y="258" fill="#18222c" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600">Principal Engineer for</text>
   <text x="112" y="326" fill="#18222c" font-family="Georgia, 'Times New Roman', serif" font-size="60" font-weight="600">Cloud Platform Modernization</text>
-  <text x="112" y="402" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26">AWS governance, secure delivery, platform resilience,</text>
-  <text x="112" y="438" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26">and AI-enabled infrastructure operations</text>
+  <text x="112" y="402" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26">AWS governance, cost controls, capacity optimization,</text>
+  <text x="112" y="438" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26">and resilient infrastructure operations</text>
   <text x="112" y="492" fill="#57616b" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24">Enterprise and government environments • Ashburn, VA</text>
   <text x="112" y="536" fill="#213f50" font-family="'Helvetica Neue', Arial, sans-serif" font-size="24" font-weight="600">jakevose.github.io</text>
 </svg>

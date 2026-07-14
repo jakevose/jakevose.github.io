@@ -12,7 +12,7 @@ module.exports = {
   currentRoleSummary:
     "Senior Solutions Architect at CTAC since 2012, leading shared cloud modernization, governance, and platform reliability.",
   summary:
-    "Principal engineer with 20+ years leading cloud platform modernization, secure delivery, and resilient engineering systems across enterprise and government environments. Current work centers on multi-tenant VNOC modernization, organization-wide AWS governance, and AI-assisted infrastructure operations.",
+    "Principal engineer with 20+ years leading cloud platform modernization, cost controls, capacity optimization, and resilient engineering systems across enterprise and government environments. Current work centers on multi-tenant VNOC modernization, organization-wide AWS governance, and AI-assisted infrastructure operations.",
   proofPoints: [
     {
       metric: "75%",
@@ -39,7 +39,7 @@ module.exports = {
     "Owns multi-tenant cloud platforms, operating models, and engineering standards across shared environments",
     "Establishes organization-wide AWS governance, security baselines, and compliance-aware delivery patterns",
     "Builds infrastructure as code and platform pipelines that reduce operational complexity for engineering teams",
-    "Applies cost discipline, reliability engineering, and attack-surface reduction across complex cloud platforms",
+    "Applies cost controls, capacity optimization, and reliability engineering across complex cloud platforms",
     "Uses AI-assisted and agentic workflows to accelerate cloud, infrastructure, and runbook engineering",
   ],
   focusAreas: [
@@ -48,8 +48,8 @@ module.exports = {
       detail: "Leads shared cloud platforms as delivery infrastructure, combining architecture, standards, cost control, and internal enablement across multi-environment enclaves.",
     },
     {
-      title: "Security and governance engineering",
-      detail: "Builds organization-wide controls and secure delivery patterns through AWS Config, Security Hub, CloudTrail, secure access architecture, and operational runbooks.",
+      title: "Cost controls and capacity optimization",
+      detail: "Connects platform architecture, usage visibility, and operating standards to reduce spend, right-size capacity, and create room for growth across shared environments.",
     },
     {
       title: "AI-enabled infrastructure operations",
@@ -68,11 +68,12 @@ module.exports = {
       ],
     },
     {
-      title: "Security governance and risk reduction",
+      title: "Governance, capacity, and risk reduction",
       lede:
-        "Builds control-plane consistency into cloud operations through governance baselines, secure access patterns, and decisive attack-surface reduction.",
+        "Builds control-plane consistency into cloud operations while improving usage visibility, capacity planning, and the economics of shared platforms.",
       outcomes: [
         "Enabled organization-wide AWS governance and security baselines through AWS Config, Security Hub, CloudTrail, and playbook-driven operational standards.",
+        "Reduced VNOC spend by 10% while cutting Splunk usage to half of the base license and identifying additional savings opportunities across platform operations.",
         "Delivered NOC VPN rollout with full SAML integration, usage controls, and reporting to improve secure access to internal tooling and lower environments.",
         "Cleared 1000+ vulnerabilities by improving inspection visibility for the infrastructure team, removing a risky prototype application, and tightening security posture across the enclave.",
       ],

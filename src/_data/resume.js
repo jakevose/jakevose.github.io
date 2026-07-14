@@ -3,11 +3,11 @@ const profile = require("./profile");
 module.exports = {
   pageTitle: `${profile.name} | Print Resume`,
   pageDescription:
-    "Print-ready two-page PDF resume for Jake Vose focused on principal-level cloud platform modernization and secure delivery leadership.",
+    "Print-ready two-page PDF resume for Jake Vose focused on principal-level cloud platform modernization, cost controls, and capacity optimization.",
   headline:
-    "Senior Solutions Architect | Principal-Level Cloud Platform Modernization, Governance, and Secure Delivery",
+    "Senior Solutions Architect | Principal-Level Cloud Platform Modernization, Cost Controls, and Capacity Optimization",
   summary:
-    "Senior Solutions Architect with 20+ years leading cloud platform modernization, secure delivery, and resilient engineering systems across enterprise and government environments. At CTAC since 2012, driving shared platform architecture, AWS governance, infrastructure delivery standards, cost discipline, and operational simplification across regulated environments. Recent work includes VNOC modernization, AI compute landing zones, traffic protection for public APIs, and CI/CD platform improvements with measurable gains in speed, resilience, and spend.",
+    "Senior Solutions Architect with 20+ years leading cloud platform modernization, cost controls, capacity optimization, and resilient engineering systems across enterprise and government environments. At CTAC since 2012, driving shared platform architecture, AWS governance, infrastructure delivery standards, and operational simplification across regulated environments. Recent work includes VNOC modernization, AI compute landing zones, traffic protection for public APIs, and CI/CD platform improvements with measurable gains in speed, resilience, and spend.",
   selectedImpact: profile.proofPoints,
   coreExpertise: [
     "AWS governance and security baselines",
@@ -15,7 +15,7 @@ module.exports = {
     "Terraform and CloudFormation delivery",
     "DevSecOps and CI/CD modernization",
     "Cost discipline and operational simplification",
-    "Platform resilience and attack-surface reduction",
+    "Platform resilience and capacity optimization",
     "AI-assisted infrastructure operations",
     "Enterprise and government delivery",
   ],
@@ -25,7 +25,7 @@ module.exports = {
     period: profile.currentPeriod,
     location: profile.location,
     summary:
-      "Leading shared cloud platform modernization, governance baselines, secure delivery patterns, and reliability improvements across regulated client environments.",
+      "Leading shared cloud platform modernization, governance baselines, cost controls, capacity optimization, and reliability improvements across regulated client environments.",
     bullets: [
       "Led multi-tenant VNOC modernization across shared cloud infrastructure, driving platform standards, infrastructure-as-code improvements, and operational simplification across client environments.",
       "Enabled organization-wide AWS governance and security baselines through AWS Config, Security Hub, CloudTrail, and playbook-driven operational standards.",
