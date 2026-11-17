@@ -1,5 +1,8 @@
 const profile = require("./profile");
 
+const stackFor = (company) =>
+  (profile.careerHistory.find((item) => item.company === company) || {}).stack || [];
+
 module.exports = {
   pageTitle: `${profile.name} | Print Resume`,
   pageDescription:
@@ -7,7 +10,7 @@ module.exports = {
   headline:
     "Senior Solutions Architect | Principal-Level Cloud Platform Modernization, Cost Controls, and Capacity Optimization",
   summary:
-    "Senior Solutions Architect with 20+ years leading cloud platform modernization, cost controls, capacity optimization, and resilient engineering systems across enterprise and government environments. At CTAC since 2012, driving shared platform architecture, AWS governance, infrastructure delivery standards, and operational simplification across regulated environments. Recent work includes VNOC modernization, AI compute landing zones, traffic protection for public APIs, and CI/CD platform improvements with measurable gains in speed, resilience, and spend.",
+    "Senior Solutions Architect with 25+ years of software engineering and 10+ years architecting cloud infrastructure across enterprise and government environments. At CTAC since 2012, most recently building a NIST Moderate AWS platform for Oak Ridge National Laboratory and modernizing a multi-tenant Virtual Network Operations Center (VNOC), with measurable gains in speed, resilience, and spend.",
   selectedImpact: profile.proofPoints,
   coreExpertise: [
     "AWS governance and security baselines",
@@ -17,7 +20,7 @@ module.exports = {
     "Cost discipline and operational simplification",
     "Platform resilience and capacity optimization",
     "AI-assisted infrastructure operations",
-    "Enterprise and government delivery",
+    "NIST Moderate federal cloud platforms",
   ],
   currentExperience: {
     company: profile.currentCompany,
@@ -38,6 +41,7 @@ module.exports = {
   earlierExperience: [
     {
       company: "Wagger Designs",
+      stack: stackFor("Wagger Designs"),
       role: "Chief Technical Officer",
       period: "2009 – 2012",
       highlights: [
@@ -46,6 +50,7 @@ module.exports = {
     },
     {
       company: "Vovici",
+      stack: stackFor("Vovici"),
       role: "Software Engineer",
       period: "2008 – 2009",
       highlights: [
@@ -54,6 +59,7 @@ module.exports = {
     },
     {
       company: "CC Pace",
+      stack: stackFor("CC Pace"),
       role: "Technical Consultant",
       period: "2005 – 2008",
       highlights: [
@@ -62,6 +68,7 @@ module.exports = {
     },
     {
       company: "RESCUECOM",
+      stack: stackFor("RESCUECOM"),
       role: "Strategic Projects Developer",
       period: "2002 – 2005",
       highlights: [
@@ -70,6 +77,7 @@ module.exports = {
     },
     {
       company: "Scient",
+      stack: stackFor("Scient"),
       role: "Consultant",
       period: "1999 – 2001",
       highlights: [
@@ -77,21 +85,28 @@ module.exports = {
       ],
     },
   ],
-  skillGroups: [
-    {
-      label: "Cloud and governance",
-      items: ["AWS", "Azure", "multi-account governance", "AWS Config", "Security Hub", "CloudTrail"],
-    },
-    {
-      label: "Platform delivery",
-      items: ["Terraform", "CloudFormation", "Docker", "Jenkins", "GitHub Actions", "GitLab CI/CD"],
-    },
-    {
-      label: "Engineering scope",
-      items: ["DevSecOps", "playbooks", "runbooks", "Python", "Node.js", "JavaScript"],
-    },
-  ],
+  currentWorkGroups: profile.principalWork,
+  ctacEngagements: profile.ctacEngagements,
   credentials: profile.credentials,
+  pdfMetadata: {
+    title: "Jake Vose – Resume",
+    subject:
+      "Senior Solutions Architect and principal engineer: cloud platform modernization, AWS governance, cost controls, and capacity optimization.",
+    keywords: [
+      "Jake Vose",
+      "Principal Engineer",
+      "Senior Solutions Architect",
+      "Cloud Platform Modernization",
+      "AWS",
+      "AWS Governance",
+      "NIST Moderate",
+      "Transit Gateway",
+      "Terraform",
+      "DevSecOps",
+      "Cost Optimization",
+      "Platform Engineering",
+    ],
+  },
   links: [
     {
       label: "Website",

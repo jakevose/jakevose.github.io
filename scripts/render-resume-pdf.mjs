@@ -1,9 +1,10 @@
 import { createServer } from "node:http";
 import { createReadStream } from "node:fs";
-import { mkdir, readFile, stat } from "node:fs/promises";
+import { mkdir, readFile, stat, writeFile } from "node:fs/promises";
 import path from "node:path";
 import process from "node:process";
 import { fileURLToPath } from "node:url";
+import { createRequire } from "node:module";
 
 import { PDFDocument } from "pdf-lib";
 import { chromium } from "playwright";
@@ -28,7 +29,14 @@ const mimeTypes = {
   ".png": "image/png",
   ".svg": "image/svg+xml",
   ".webp": "image/webp",
+  ".woff2": "font/woff2",
+  ".txt": "text/plain; charset=utf-8",
 };
+
+const require = createRequire(import.meta.url);
+const resume = require("../src/_data/resume.js");
+const profile = require("../src/_data/profile.js");
+const socialCardOutput = path.join(siteDir, "assets", "social-card.png");
 
 function resolveRequestPath(urlPath) {
   const decodedPath = decodeURIComponent(urlPath.split("?")[0]);
@@ -78,6 +86,19 @@ function createStaticServer() {
   });
 }
 
+async function renderSocialCard(browser, url) {
+  const page = await browser.newPage({ viewport: { width: 1200, height: 630 } });
+
+  try {
+    await page.goto(url, { waitUntil: "networkidle" });
+    await page.evaluate(() => document.fonts.ready);
+    await page.screenshot({ path: socialCardOutput, type: "png" });
+    console.log(`Generated ${socialCardOutput}`);
+  } finally {
+    await page.close();
+  }
+}
+
 async function renderResumePdf() {
   await mkdir(path.dirname(outputPath), { recursive: true });
 
@@ -96,8 +117,11 @@ async function renderResumePdf() {
   const resumeUrl = `http://127.0.0.1:${address.port}${resumeRoute}`;
 
   try {
+    await renderSocialCard(browser, `http://127.0.0.1:${address.port}/assets/social-card.svg`);
+
     await page.goto(resumeUrl, { waitUntil: "networkidle" });
     await page.emulateMedia({ media: "print" });
+    await page.evaluate(() => document.fonts.ready);
     await page.pdf({
       path: outputPath,
       preferCSSPageSize: true,
@@ -134,6 +158,18 @@ async function renderResumePdf() {
   const fileBytes = await readFile(outputPath);
   const pdf = await PDFDocument.load(fileBytes);
   const pageCount = pdf.getPageCount();
+  const meta = resume.pdfMetadata;
+
+  pdf.setTitle(meta.title, { showInWindowTitleBar: true });
+  pdf.setAuthor(profile.name);
+  pdf.setSubject(meta.subject);
+  pdf.setKeywords(meta.keywords);
+  pdf.setCreator(`${profile.website} (Eleventy + Playwright)`);
+  pdf.setProducer("pdf-lib");
+  pdf.setLanguage("en-US");
+  pdf.setCreationDate(new Date());
+  pdf.setModificationDate(new Date());
+  await writeFile(outputPath, await pdf.save());
 
   if (pageCount !== expectedPageCount) {
     throw new Error(

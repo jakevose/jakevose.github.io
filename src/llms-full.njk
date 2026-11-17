@@ -1,0 +1,67 @@
+---
+permalink: /llms-full.txt
+eleventyExcludeFromCollections: true
+---
+# {{ profile.name | safe }} — {{ profile.title | safe }}
+
+{{ profile.currentRole | safe }} at {{ profile.currentCompany | safe }} · {{ profile.location | safe }} · {{ profile.email | safe }} · {{ profile.linkedinUrl | safe }} · {{ site.canonicalUrl | safe }}
+
+## Summary
+
+{{ resume.summary | safe }}
+
+## Selected impact
+
+{% for point in profile.proofPoints -%}
+- **{{ point.metric | safe }} {{ point.label | safe }}**: {{ point.context | safe }}
+{% endfor %}
+## Core expertise
+
+{% for item in resume.coreExpertise -%}
+- {{ item | safe }}
+{% endfor %}
+## Experience
+
+### {{ profile.currentRole | safe }}, {{ profile.currentCompany | safe }} ({{ profile.currentPeriod | safe }})
+
+{{ profile.currentRoleSummary | safe }}
+{% for group in profile.principalWork %}
+#### {{ group.title | safe }}
+
+{{ group.lede | safe }}
+
+{% for outcome in group.outcomes -%}
+- {{ outcome | safe }}
+{% endfor %}{% endfor %}
+#### {{ profile.ctacEngagements.title | safe }}
+
+{{ profile.ctacEngagements.lede | safe }}
+
+{% for item in profile.ctacEngagements.items -%}
+- {{ item | safe }}
+{% endfor %}
+{% for job in resume.earlierExperience -%}
+### {{ job.role | safe }}, {{ job.company | safe }} ({{ job.period | safe }})
+
+{% for highlight in job.highlights -%}
+- {{ highlight | safe }}
+{% endfor %}{% if job.stack %}- Stack: {{ job.stack | join(", ") | safe }}
+{% endif %}
+{% endfor -%}
+## Skills
+
+{% for skill in profile.skills -%}
+- **{{ skill.label | safe }}**: {{ skill.items | join(", ") | safe }}
+{% endfor %}
+## Credentials
+
+{% for credential in profile.credentials -%}
+- {{ credential | safe }}
+{% endfor %}
+## Career history
+
+| Role | Company | Years |
+| --- | --- | --- |
+{% for item in profile.careerHistory -%}
+| {{ item.role | safe }} | {{ item.company | safe }} | {{ item.period | safe }} |
+{% endfor %}

@@ -1,0 +1,42 @@
+/* Static Inter and Newsreader instances (SIL OFL) for the PDF resume. */
+@font-face {
+  font-family: "Resume Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/print/inter-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Resume Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/print/inter-400-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Resume Sans";
+  font-style: normal;
+  font-weight: 500;
+  src: url("/assets/fonts/print/inter-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Resume Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/print/inter-600-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Resume Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/print/newsreader-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Resume Serif";
+  font-style: normal;
+  font-weight: 600;
+  src: url("/assets/fonts/print/newsreader-600-normal.woff2") format("woff2");
+}

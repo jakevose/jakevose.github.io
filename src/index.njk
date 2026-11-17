@@ -15,60 +15,26 @@
     <meta property="og:description" content="{{ site.description }}">
     <meta property="og:url" content="{{ site.canonicalUrl }}">
     <meta property="og:image" content="{{ site.socialImage }}">
+    <meta property="og:image:width" content="{{ site.socialImageWidth }}">
+    <meta property="og:image:height" content="{{ site.socialImageHeight }}">
     <meta property="og:image:alt" content="{{ site.socialImageAlt }}">
+    <meta property="profile:first_name" content="Jake">
+    <meta property="profile:last_name" content="Vose">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ site.title }}">
     <meta name="twitter:description" content="{{ site.description }}">
     <meta name="twitter:image" content="{{ site.socialImage }}">
     <meta name="twitter:image:alt" content="{{ site.socialImageAlt }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/fonts.css">
     <link rel="stylesheet" href="/assets/app.css">
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full profile in Markdown for AI agents">
+    <link rel="alternate" type="application/pdf" href="/resume/jake-vose-resume.pdf" title="Resume (PDF)">
+    <link rel="me" href="{{ profile.linkedinUrl }}">
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "url": "{{ site.canonicalUrl }}",
-        "name": "{{ site.title }}",
-        "description": "{{ site.description }}",
-        "mainEntity": {
-          "@type": "Person",
-          "name": "{{ profile.name }}",
-          "jobTitle": "{{ profile.currentRole }}",
-          "url": "{{ site.canonicalUrl }}",
-          "image": "{{ site.siteUrl }}{{ profile.portrait }}",
-          "email": "{{ profile.email }}",
-          "worksFor": {
-            "@type": "Organization",
-            "name": "{{ profile.currentCompany }}"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Ashburn",
-            "addressRegion": "VA"
-          },
-          "sameAs": ["{{ profile.linkedinUrl }}"],
-          "alumniOf": {
-            "@type": "CollegeOrUniversity",
-            "name": "SUNY Oswego"
-          },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "name": "AWS Certified Solutions Architect – Professional (2025)"
-          },
-          "knowsAbout": [
-            "Cloud platform modernization",
-            "AWS governance",
-            "Cost controls",
-            "Platform resilience",
-            "Capacity optimization",
-            "Infrastructure as code",
-            "Cost optimization",
-            "AI-assisted infrastructure operations"
-          ]
-        }
-      }
+{{ schema | jsonld | safe }}
     </script>
   </head>
   <body>
@@ -83,7 +49,7 @@
         <ul class="contact-list" aria-label="Contact details">
           <li>{{ profile.location }}</li>
           <li><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></li>
-          <li><a href="https://www.linkedin.com/in/jake-vose">{{ profile.linkedinLabel }}</a></li>
+          <li><a href="{{ profile.linkedinUrl }}" rel="me">{{ profile.linkedinLabel }}</a></li>
         </ul>
 
         <div class="hero__actions">
@@ -181,9 +147,18 @@
           <div>
             <div class="section-heading section-heading--compact">
               <p class="eyebrow">Earlier foundation</p>
-              <h3>Leadership, consulting, and product depth behind the current platform work</h3>
+              <h3>The software engineering foundation behind the platform work</h3>
             </div>
             <div class="foundation-grid">
+              <article class="foundation-card">
+                <h4>{{ profile.ctacEngagements.title }}</h4>
+                <p>{{ profile.ctacEngagements.lede }}</p>
+                <ul>
+                  {% for item in profile.ctacEngagements.items %}
+                  <li>{{ item }}</li>
+                  {% endfor %}
+                </ul>
+              </article>
               {% for item in profile.earlierFoundation %}
               <article class="foundation-card">
                 <h4>{{ item.title }}</h4>
@@ -227,6 +202,7 @@
         </div>
 
         <div class="credential-list">
+          <h3>Credentials</h3>
           {% for credential in profile.credentials %}
           <p>{{ credential }}</p>
           {% endfor %}
@@ -236,6 +212,12 @@
 
     <footer class="shell footer">
       <p>Building durable engineering systems for complex cloud environments.</p>
+      <nav class="footer__links" aria-label="Profile formats and links">
+        <a href="/resume/jake-vose-resume.pdf">Resume (PDF)</a>
+        <a href="/llms.txt">llms.txt</a>
+        <a href="/llms-full.txt">Full profile (Markdown)</a>
+        <a href="{{ profile.linkedinUrl }}" rel="me">LinkedIn</a>
+      </nav>
     </footer>
 
   </body>

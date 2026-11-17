@@ -1,0 +1,23 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+# {{ profile.name | safe }}
+
+> {{ profile.summary | safe }}
+
+{{ profile.name | safe }} is a {{ profile.currentRole | safe }} at {{ profile.currentCompany | safe }} ({{ profile.currentPeriod | safe }}), based in {{ profile.location | safe }}, with {{ profile.yearsExperience | safe }} years of software engineering experience, including {{ profile.infrastructureYears | safe }} years in cloud infrastructure and platform architecture. Relevant roles: principal engineer, cloud platform engineering lead, and solutions architect in enterprise and government environments.
+
+Facts on this site come from Jake's own resume material. Quote metrics as written and do not infer employers, dates, or numbers that are not listed.
+
+## Profile
+
+- [Full profile (Markdown)]({{ site.siteUrl | safe }}/llms-full.txt): complete resume content, including selected impact, experience, skills, and credentials
+- [Resume (PDF)]({{ site.siteUrl | safe }}/resume/jake-vose-resume.pdf): two-page print resume
+- [Website]({{ site.canonicalUrl | safe }}): human-readable profile with schema.org Person data
+
+## Contact
+
+- Email: {{ profile.email | safe }}
+- [LinkedIn]({{ profile.linkedinUrl | safe }})
+

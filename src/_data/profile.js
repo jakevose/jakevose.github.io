@@ -5,6 +5,10 @@ module.exports = {
   email: "jakevose@proton.me",
   linkedinLabel: "linkedin.com/in/jake-vose",
   linkedinUrl: "https://www.linkedin.com/in/jake-vose",
+  website: "https://jakevose.github.io",
+  websiteLabel: "jakevose.github.io",
+  yearsExperience: "25+",
+  infrastructureYears: "10+",
   portrait: "/assets/jake_vose.jpg",
   currentRole: "Senior Solutions Architect",
   currentCompany: "CTAC",
@@ -12,7 +16,7 @@ module.exports = {
   currentRoleSummary:
     "Senior Solutions Architect at CTAC since 2012, leading shared cloud modernization, governance, and platform reliability.",
   summary:
-    "Principal engineer with 20+ years leading cloud platform modernization, cost controls, capacity optimization, and resilient engineering systems across enterprise and government environments. Current work centers on multi-tenant VNOC modernization, organization-wide AWS governance, and AI-assisted infrastructure operations.",
+    "Principal engineer with 25+ years of software engineering, the last 10+ focused on cloud infrastructure and platform architecture across enterprise and government environments. Most recently built a NIST Moderate AWS platform for Oak Ridge National Laboratory; ongoing work centers on modernizing a multi-tenant Virtual Network Operations Center (VNOC), organization-wide AWS governance, cost controls, and AI-assisted infrastructure operations.",
   proofPoints: [
     {
       metric: "75%",
@@ -22,23 +26,23 @@ module.exports = {
     {
       metric: "98%",
       label: "less illegitimate traffic",
-      context: "Traffic-throttling architecture for NHTSA's public API, reducing abusive and non-legitimate traffic while protecting service availability.",
+      context: "Traffic-throttling architecture protecting NHTSA's public API from abusive traffic.",
     },
     {
       metric: "10%",
       label: "VNOC spend reduction",
-      context: "Cost discipline and platform modernization across shared cloud operations, supported by additional savings work including reduced Splunk consumption.",
+      context: "Shared cloud operations spend, alongside halving Splunk license usage.",
     },
     {
       metric: "60%",
       label: "less delivery complexity",
-      context: "Immutable CI/CD application stacks for TheRealCost.gov, with two additional nines of stability and performance.",
+      context: "Immutable CI/CD stacks for TheRealCost.gov, adding two nines of stability.",
     },
   ],
   strengths: [
     "Owns multi-tenant cloud platforms, operating models, and engineering standards across shared environments",
     "Establishes organization-wide AWS governance, security baselines, and compliance-aware delivery patterns",
-    "Builds infrastructure as code and platform pipelines that reduce operational complexity for engineering teams",
+    "Applies 25+ years of software engineering to infrastructure: platforms and pipelines built as code that reduce operational complexity for engineering teams",
     "Applies cost controls, capacity optimization, and reliability engineering across complex cloud platforms",
     "Uses AI-assisted and agentic workflows to accelerate cloud, infrastructure, and runbook engineering",
   ],
@@ -58,13 +62,23 @@ module.exports = {
   ],
   principalWork: [
     {
+      title: "NIST Moderate AWS platform for Oak Ridge National Laboratory",
+      lede:
+        "Most recent build: a compliance-ready AWS platform-as-a-service for a Department of Energy national laboratory, delivered as Terraform and Bash.",
+      outcomes: [
+        "Built a NIST Moderate AWS PaaS for Oak Ridge National Laboratory, defined end to end in Terraform and Bash.",
+        "Designed hub-and-spoke Transit Gateway networking as a virtual Trusted Internet Connection (TIC), with centralized inspection behind AWS Network Firewall.",
+        "Automated hardened base image creation and tag-based patching across the instance fleet.",
+        "Implemented user-tiered instance access through AWS Systems Manager Session Manager, with full session logging.",
+      ],
+    },
+    {
       title: "Platform modernization and cost discipline",
       lede:
         "Owns VNOC modernization as a shared cloud platform, combining architecture, operating standards, and cost discipline rather than treating infrastructure as a series of isolated projects.",
       outcomes: [
         "Led multi-tenant VNOC modernization across shared cloud infrastructure, driving platform standards, infrastructure as code improvements, and operational simplification across client environments.",
         "Reduced VNOC spend by 10% while cutting Splunk usage to half of the base license and identifying additional savings opportunities across platform operations.",
-        "Built base Ubuntu 24.04 delivery pipeline and improved platform reliability by resolving persistent build failures and long-standing partitioning issues.",
       ],
     },
     {
@@ -73,7 +87,7 @@ module.exports = {
         "Builds control-plane consistency into cloud operations while improving usage visibility, capacity planning, and the economics of shared platforms.",
       outcomes: [
         "Enabled organization-wide AWS governance and security baselines through AWS Config, Security Hub, CloudTrail, and playbook-driven operational standards.",
-        "Reduced VNOC spend by 10% while cutting Splunk usage to half of the base license and identifying additional savings opportunities across platform operations.",
+        "Identified an EBS snapshot architecture issue representing potential savings of roughly 20% of spend for one client, with similar opportunities across other tenants.",
         "Delivered NOC VPN rollout with full SAML integration, usage controls, and reporting to improve secure access to internal tooling and lower environments.",
         "Cleared 1000+ vulnerabilities by improving inspection visibility for the infrastructure team, removing a risky prototype application, and tightening security posture across the enclave.",
       ],
@@ -89,6 +103,16 @@ module.exports = {
       ],
     },
   ],
+  ctacEngagements: {
+    title: "Earlier CTAC delivery",
+    lede:
+      "Before VNOC, led application and platform delivery for federal health and communications programs.",
+    items: [
+      "Led content delivery platform strategy for FDA's Center for Tobacco Products across public websites and internal systems of record, including the DevOps pipelines behind them (Ruby on Rails, Drupal, Terraform, Packer, CloudFormation).",
+      "Built a Kids.gov migration prototype for GSA: reverse-engineered Percussion CM1 content into XML, exposed it as a self-documenting REST API (Ruby, Swagger), and generated a static site from that API with Node.js.",
+      "Developed a public communication review and sign-off workflow for HHS in Ruby on Rails, replacing an outdated job runner with a Redis-based queue and speeding exports by flattening normalized data into MongoDB.",
+    ],
+  },
   earlierFoundation: [
     {
       title: "Earlier leadership and product engineering",
@@ -109,55 +133,66 @@ module.exports = {
   careerHistory: [
     {
       company: "CTAC",
+      stack: ["AWS", "Azure", "Terraform", "Python", "Ruby on Rails", "Drupal", "PostgreSQL"],
       role: "Senior Solutions Architect",
       period: "2012 – Present",
     },
     {
       company: "Wagger Designs",
+      stack: ["PHP", "Drupal", "WordPress", "Ruby on Rails", "MySQL", "Objective-C"],
       role: "Chief Technical Officer",
       period: "2009 – 2012",
     },
     {
       company: "Vovici",
+      stack: ["C# .NET", "SQL Server", "SOAP/XML", "jQuery", "VMware ESX"],
       role: "Software Engineer",
       period: "2008 – 2009",
     },
     {
       company: "CC Pace",
+      stack: ["Scheme (Lisp)", "C# and VB .NET", "Oracle", "Integra Destiny", "FNIS Empower"],
       role: "Technical Consultant",
       period: "2005 – 2008",
     },
     {
       company: "RESCUECOM",
+      stack: ["Visual FoxPro", "Macromedia Flash", ".NET Compact Framework"],
       role: "Strategic Projects Developer",
       period: "2002 – 2005",
     },
     {
       company: "Scient",
+      stack: ["Java", "Enterprise JavaBeans", "WebLogic", "TIBCO Rendezvous"],
       role: "Consultant",
       period: "1999 – 2001",
     },
   ],
+  // Grouped by kind; within each group, most current and most used first.
   skills: [
     {
-      label: "Cloud platforms",
-      items: ["AWS", "Azure", "multi-account governance"],
+      label: "Cloud and networking",
+      items: ["AWS", "Azure", "Transit Gateway", "AWS Network Firewall", "Session Manager"],
     },
     {
-      label: "Infrastructure",
-      items: ["Terraform", "CloudFormation", "Docker", "AWS Config", "Security Hub"],
+      label: "Security & governance",
+      items: ["Multi-account governance", "AWS Config", "Security Hub", "CloudTrail", "Inspector"],
     },
     {
-      label: "Languages and automation",
-      items: ["Python", "Ruby", "Node.js", "Java", "C#", "JavaScript"],
+      label: "Infrastructure as code",
+      items: ["Terraform", "CloudFormation", "Packer", "EC2 Image Builder", "Docker"],
     },
     {
-      label: "Data and platforms",
-      items: ["MySQL", "PostgreSQL", "MongoDB", "SQL Server", "Redis", "Elasticsearch"],
+      label: "CI/CD",
+      items: ["GitHub Actions", "GitLab CI/CD", "Jenkins", "AWS CodeBuild"],
     },
     {
-      label: "Delivery and operations",
-      items: ["Jenkins", "GitHub Actions", "GitLab CI/CD", "DevSecOps", "playbooks", "runbooks", "AI-assisted workflows"],
+      label: "Languages",
+      items: ["Python", "Bash", "Ruby", "JavaScript and Node.js", "C#", "Java"],
+    },
+    {
+      label: "Data",
+      items: ["PostgreSQL", "MySQL", "SQL Server", "MongoDB", "Redis", "OpenSearch/Elasticsearch"],
     },
   ],
   credentials: [

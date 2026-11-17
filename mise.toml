@@ -1,5 +1,5 @@
 [tools]
-node = "22.22.2"
+node = "26.13.1"
 
 [tasks.install]
 description = "Install project dependencies"
@@ -24,3 +24,7 @@ run = "npm run build:all"
 [tasks.pdf-watch]
 description = "Watch source files and regenerate the PDF resume on change"
 run = "npm run watch:pdf"
+
+[tasks.preview]
+description = "Build the site, PDF, and social card, then serve locally with live reload"
+run = "npm run build:all && npx @11ty/eleventy --serve"

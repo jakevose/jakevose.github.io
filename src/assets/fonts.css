@@ -1,0 +1,24 @@
+/* Self-hosted variable fonts (SIL Open Font License), copied from @fontsource-variable at build time. */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("/assets/fonts/newsreader.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-display: swap;
+  font-weight: 200 800;
+  src: url("/assets/fonts/newsreader-italic.woff2") format("woff2-variations");
+}
+
+@font-face {
+  font-family: "Space Grotesk";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300 700;
+  src: url("/assets/fonts/space-grotesk.woff2") format("woff2-variations");
+}
