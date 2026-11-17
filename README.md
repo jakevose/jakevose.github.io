@@ -86,6 +86,8 @@ The PDF render depends on the built site output, so the site and PDF cannot be r
 
 ## Build Pipeline
 
+GitHub Pages must be set to **Settings → Pages → Source: GitHub Actions**. With "Deploy from a branch", GitHub also runs its default Jekyll build on every push, which races this workflow and can publish a broken site.
+
 The GitHub Pages workflow does the following on pushes to `main`:
 
 1. Checks out the repository
