@@ -16,7 +16,7 @@ module.exports = {
   currentRoleSummary:
     "Senior Solutions Architect at CTAC since 2012, leading shared cloud modernization, governance, and platform reliability.",
   summary:
-    "Principal engineer with 25+ years of software engineering, the last 10+ focused on cloud infrastructure and platform architecture across enterprise and government environments. Most recently built a NIST SP 800-53 Moderate AWS platform for Oak Ridge National Laboratory; ongoing work centers on modernizing a multi-tenant Virtual Network Operations Center (VNOC), organization-wide AWS governance, cost controls, and AI-assisted infrastructure operations.",
+    "Principal engineer with 25+ years of software engineering, the last 10+ focused on cloud infrastructure and platform architecture across enterprise and government environments. Most recently built a NIST SP 800-53 Rev. 5 Moderate AWS platform for Oak Ridge National Laboratory; ongoing work centers on modernizing a multi-tenant Virtual Network Operations Center (VNOC), organization-wide AWS governance, cost controls, and AI-assisted infrastructure operations.",
   proofPoints: [
     {
       metric: "75%",
@@ -62,11 +62,11 @@ module.exports = {
   ],
   principalWork: [
     {
-      title: "NIST SP 800-53 Moderate AWS platform for Oak Ridge National Laboratory",
+      title: "NIST SP 800-53 Rev. 5 Moderate AWS platform for Oak Ridge National Laboratory",
       lede:
         "Follow-on work earned by the success of the earlier ORNL AI compute landing zones: a compliance-ready AWS platform-as-a-service for a Department of Energy national laboratory, delivered as Terraform and Bash.",
       outcomes: [
-        "Built on the success of earlier ORNL AI compute landing zones with a NIST SP 800-53 Moderate AWS PaaS, defined in Terraform and Bash.",
+        "Built on the success of earlier ORNL AI compute landing zones with a NIST SP 800-53 Rev. 5 Moderate AWS PaaS, defined in Terraform and Bash.",
         "Designed hub-and-spoke Transit Gateway networking as a virtual Trusted Internet Connection (TIC), with centralized inspection behind AWS Network Firewall.",
         "Automated hardened base image creation and tag-based patching across the instance fleet.",
         "Implemented user-tiered instance access through AWS Systems Manager Session Manager, with full session logging.",

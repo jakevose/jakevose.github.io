@@ -72,7 +72,7 @@ module.exports = {
       "Infrastructure as code",
       "DevSecOps",
       "AI-assisted infrastructure operations",
-      "NIST SP 800-53 Moderate compliance",
+      "NIST SP 800-53 Rev. 5 Moderate compliance",
       "Trusted Internet Connection (TIC) architecture",
       ...skills,
     ],
