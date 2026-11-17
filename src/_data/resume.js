@@ -10,7 +10,7 @@ module.exports = {
   headline:
     "Senior Solutions Architect | Principal-Level Cloud Platform Modernization, Cost Controls, and Capacity Optimization",
   summary:
-    "Senior Solutions Architect with 25+ years of software engineering and 10+ years architecting cloud infrastructure across enterprise and government environments. At CTAC since 2012, most recently building a NIST Moderate AWS platform for Oak Ridge National Laboratory and modernizing a multi-tenant Virtual Network Operations Center (VNOC), with measurable gains in speed, resilience, and spend.",
+    "Senior Solutions Architect with 25+ years of software engineering and 10+ years architecting cloud infrastructure across enterprise and government environments. At CTAC since 2012, most recently building a NIST SP 800-53 Moderate AWS platform for Oak Ridge National Laboratory and modernizing a multi-tenant Virtual Network Operations Center (VNOC), with measurable gains in speed, resilience, and spend.",
   selectedImpact: profile.proofPoints,
   coreExpertise: [
     "AWS governance and security baselines",
@@ -20,7 +20,7 @@ module.exports = {
     "Cost discipline and operational simplification",
     "Platform resilience and capacity optimization",
     "AI-assisted infrastructure operations",
-    "NIST Moderate federal cloud platforms",
+    "NIST SP 800-53 Moderate platforms",
   ],
   currentExperience: {
     company: profile.currentCompany,
@@ -99,7 +99,7 @@ module.exports = {
       "Cloud Platform Modernization",
       "AWS",
       "AWS Governance",
-      "NIST Moderate",
+      "NIST SP 800-53 Moderate",
       "Transit Gateway",
       "Terraform",
       "DevSecOps",
